@@ -1,4 +1,3 @@
-
 /*
 	Paged-Vector implementation - Sample usage demo
 	Autor	: Dimitris Vlachos
@@ -75,7 +74,6 @@ int main() {
 	[paged_vector]
 	Fill
 	Assign
-	Cmp
 	Ok
 
 	real	0m1.007s
@@ -85,7 +83,6 @@ int main() {
 	[std::vector]
 	Fill
 	Assign
-	Cmp
 	Ok
 
 	real	0m1.408s
