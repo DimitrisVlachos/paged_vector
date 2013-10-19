@@ -144,14 +144,13 @@ class paged_vector {
     inline void push_back(const base_t& in) {
         const uint32_t page = m_elements >> k_page_shr;
 
-        if (page == m_page_ptr) { //99% of the time
-            m_active_page[(m_elements++) & k_page_mod] = in;
-            return;
+        if (page != m_page_ptr) { //1% of the time
+        	add_page();
+        	m_active_page = m_page[m_page_ptr];
         }
 
-        add_page();
-        m_active_page = m_page[m_page_ptr];
-        m_active_page[(m_elements++) & k_page_mod] = in;
+		*(m_active_page++) = in;
+		++m_elements;
     }
 
     inline base_t& back() {
@@ -165,9 +164,6 @@ class paged_vector {
     inline void pop_back() {
         m_elements -= m_elements != 0U;
         const uint32_t page = m_elements >> k_page_shr;
-        if (page == m_page_ptr) {
-            return;
-        }
         m_page_ptr = page;
         m_active_page = m_page[m_page_ptr];
     }
