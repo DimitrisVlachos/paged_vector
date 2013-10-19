@@ -49,10 +49,9 @@ int main() {
 	Cmp
 	Ok
 
-	real	0m1.441s
-	user	0m1.148s
-	sys	0m0.292s
-
+	real	0m1.470s
+	user	0m1.168s
+	sys	0m0.300s
 
 
 	[std::vector]
@@ -61,57 +60,31 @@ int main() {
 	Cmp
 	Ok
 
-	real	0m1.633s
-	user	0m1.144s
+	real	0m1.641s
+	user	0m1.152s
 	sys	0m0.488s
 
 
-
-
-	CMP results : Fill , Assign 
-	len = 256*1024*1024 + 7;
-
-	[paged_vector]
-	Fill
-	Assign
-	Ok
-
-	real	0m1.007s
-	user	0m0.724s
-	sys	0m0.280s
-
-	[std::vector]
-	Fill
-	Assign
-	Ok
-
-	real	0m1.408s
-	user	0m0.840s
-	sys	0m0.564s
-
-
-
-
-	CMP results : Fill  
+	CMP results : Fill 
 	len = 256*1024*1024 + 7;
 
 	[paged_vector]
 	Fill
 	Ok
 
-	real	0m0.635s
-	user	0m0.508s
-	sys	0m0.124s
+	real	0m0.727s
+	user	0m0.620s
+	sys	0m0.104s
+
 
 
 	[std::vector]
 	Fill
 	Ok
 
-	real	0m1.161s
+	real	0m2.475s
 	user	0m0.764s
-	sys	0m0.396s
-
+	sys	0m0.476s
 
 
 */
